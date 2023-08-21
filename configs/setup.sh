@@ -6,6 +6,8 @@ cd yay
 yes | makepkg -si
 
 #Copying configuration
+CUR= pwd
+
 cd ~/.config
 
 rm -rf ~/.config/waybar
@@ -14,11 +16,11 @@ rm -rf ~/.config/rofi
 rm -rf ~/.config/alacritty
 rm -rf ~/.config/hypr
 
-ln -s ~/Configs/waybar
-ln -s ~/Configs/swaylock
-ln -s ~/Configs/rofi
-ln -s ~/Configs/alacritty
-ln -s ~/Configs/hypr
+ln -s $CUR/waybar
+ln -s $CUR/swaylock
+ln -s $CUR/rofi
+ln -s $CUR/alacritty
+ln -s $CUR/hypr
 
 ####EXTRAS
 yay -S neovim -y
