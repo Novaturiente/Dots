@@ -22,10 +22,16 @@ ln -s $CUR/rofi
 ln -s $CUR/alacritty
 ln -s $CUR/hypr
 
+cp $CUR/zsh/zshrc ~/.zshrc
+
 ####EXTRAS
 yay -S neovim -y
-yay -S hyprland-nvidia waybar rofi alacritty hyprpaper brightnessctl -y
+yay -S hyprland-nvidia waybar rofi alacritty hyprpaper brightnessctl ly -y
 yay -S zsh -y
 yay -S flatpak -y
 yay -S ttf-space-mono-nerd ttf-nerd-fonts-symbols-common otf-sora otf-firamono-nerd ttf-nerd-fonts-symbols-common ttf-iosevka-nerd -y
 yay -S mullvad-browser-bin -y
+
+sudo systemctl enable ly
+
+chsh
